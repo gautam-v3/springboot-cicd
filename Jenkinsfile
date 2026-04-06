@@ -15,9 +15,9 @@ pipeline {
    }
   }
   stage('Deploy') {
-   steps {
-    bat 'kubectl apply -f deployment.yaml --validate=false'
-   }
+ steps {
+  bat 'set KUBECONFIG=C:\\Users\\Gautam\\.kube\\config && kubectl apply -f deployment.yaml --validate=false'
+    }
   }
  }
 }
